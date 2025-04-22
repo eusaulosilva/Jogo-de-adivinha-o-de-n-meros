@@ -8,7 +8,7 @@ const inputChute = document.querySelector('input');
 const btnChutar =  document.getElementById('chutar');
 const btnReiniciar = document.getElementById('reiniciar');
 
-console.log(numberSecret);
+// console.log(numberSecret);
 mensagemInicial();
 
 // ----- EVENT LISTENER PARA TECLA ENTER -----
@@ -101,7 +101,7 @@ function gerarNumeroAleatorio() {
         return gerarNumeroAleatorio();
     } else {
         listaDeNumerosSorteados.push(numeroEscolhido);
-        console.log(listaDeNumerosSorteados);
+        // console.log(listaDeNumerosSorteados);
         return numeroEscolhido;
     }
 }
@@ -112,7 +112,7 @@ function limpar() {
 
 function reiniciarJogo() {
     numberSecret = gerarNumeroAleatorio();
-    console.log(numberSecret);
+    // console.log(numberSecret);
     limpar();
     mensagemInicial();
     tentativa = 1;
