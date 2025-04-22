@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Love';
-    src: url('fonte/grisly_beast/Grisly Beast.ttf');
+    src: url('fonte/grisly_beast/Grisly Beast.ttf') format('truetype');;
 }
 body {
     background: linear-gradient(to right, #F7931E 0%, #F7931E 33.33%, #F7931E 66.67%, #A36833 100%);
