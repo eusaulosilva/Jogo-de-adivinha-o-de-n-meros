@@ -22,7 +22,7 @@ body {
 body::before {
     background-image: url("img/bg35.png");
     background-repeat: no-repeat;
-    background-position: 100%;
+    background-position: 110% 50%;
     content: "";
     display: block;
     position: absolute;
@@ -222,7 +222,7 @@ button.container__botao:disabled {
     }
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (max-width: 1600px) {
     h1 {
         font-size: 50px;
     }
@@ -251,7 +251,8 @@ button.container__botao:disabled {
    .container {
     justify-content: center; /* Centraliza o conteúdo */
     align-items: center; /* Centraliza o conteúdo */
-    width: 90%; /* Adapta a largura ao monitor */
+    width: 80%; /* Adapta a largura ao monitor */
     margin: 1rem; /* Adiciona margem ao redor da container */
 }
 }
+
