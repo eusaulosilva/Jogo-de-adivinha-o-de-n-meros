@@ -213,9 +213,10 @@ button.container__botao:disabled {
     }
 }
 
-@media screen and (min-width: 1390px) {
+/* @media screen and (min-width: 1390px) {
     .container {
         width: 80%;
         margin: 2rem; /* Adiciona margem ao redor da container */
-    }
+  /*  }
 }
+ */
