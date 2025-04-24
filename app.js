@@ -128,11 +128,10 @@ function atualizarChutesErrados() {
 
     if (chutesErrados.length > 0) {
         container.innerHTML = '<p>Números já tentados:</p>';
-        const chutesOrdenados = [...chutesErrados].sort((a, b) => a - b);
-
-        chutesOrdenados.forEach((chute, i) => {
+        
+        chutesErrados.forEach((chute, i) => {
             const span = document.createElement('span');
-            span.textContent = chute + (i < chutesOrdenados.length - 1 ? ', ' : '');
+            span.textContent = chute + (i < chutesErrados.length - 1 ? ' | ' : '');
             container.appendChild(span);
         });
     }
