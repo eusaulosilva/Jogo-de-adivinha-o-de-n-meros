@@ -13,7 +13,7 @@
 body {
     background: linear-gradient(to right, #F7931E 0%, #F7931E 33.33%, #F7931E 66.67%, #A36833 100%);
     height: 100vh;
-    min-height: 720px; /* Define a altura mínima */
+   /* min-height: 720px; /* Define a altura mínima */
     display: flex;
     align-items: center;
     justify-content: center;
