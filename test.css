@@ -252,6 +252,7 @@ button.container__botao:disabled {
     justify-content: center; /* Centraliza o conteúdo */
     align-items: center; /* Centraliza o conteúdo */
     width: 80%; /* Adapta a largura ao monitor */
+    height: 90%;
     margin: 1rem; /* Adiciona margem ao redor da container */
 }
 }
