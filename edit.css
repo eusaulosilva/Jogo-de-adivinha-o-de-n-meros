@@ -213,10 +213,12 @@ button.container__botao:disabled {
     }
 }
 
-/* @media screen and (min-width: 1390px) {
-    .container {
-        width: 80%;
-        margin: 2rem; /* Adiciona margem ao redor da container */
-  /*  }
+@media screen and (min-width: 1330px) {
+    h1 {
+        font-size: 65px;
+    }
+
+    .container__imagem-pessoa {
+        display: 50%; /* Esconde a imagem em telas menores que 1390px */
+    }
 }
- */
