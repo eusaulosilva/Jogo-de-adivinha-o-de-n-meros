@@ -13,7 +13,6 @@
 body {
     background: linear-gradient(to right, #F7931E 0%, #F7931E 33.33%, #F7931E 66.67%, #A36833 100%);
     height: 100vh;
-    min-height: 720px; /* Define a altura mínima */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +22,7 @@ body {
 body::before {
     background-image: url("img/bg35.png");
     background-repeat: no-repeat;
-    background-position: 120%;
+    background-position: 100%;
     content: "";
     display: block;
     position: absolute;
@@ -150,7 +149,7 @@ button.container__botao:disabled {
 }
 
 
-@media screen and (max-width: 1329px) {
+@media screen and (max-width: 1249px) {
     h1 {
         font-size: 50px;
     }
@@ -223,16 +222,36 @@ button.container__botao:disabled {
     }
 }
 
-@media screen and (min-width: 1330px) {
-    h1{
+@media screen and (min-width: 1250px) {
+    h1 {
         font-size: 50px;
     }
-    .container {
-        width: 90%;
-        height: 80%;
-        /* margin: 2rem; Adiciona margem superior e inferior */
+
+    .container__botao {
+        font-size: 16px;
     }
+
+    .texto__paragrafo {
+        font-size: 24px;
+    }
+
+
+    .container__informacoes {
+        padding: 1rem;
+    }
+
+    body::before {
+        background-size: contain; /* Ajusta a imagem para se conter dentro da área */
+    }
+
+    
    .container__imagem-pessoa{
     width: 40%;
    }
+   .container {
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center; /* Centraliza o conteúdo */
+    width: 90%; /* Adapta a largura ao monitor */
+    margin: 1rem; /* Adiciona margem ao redor da container */
+}
 }
