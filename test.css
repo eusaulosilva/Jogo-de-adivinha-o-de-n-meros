@@ -1,13 +1,3 @@
-@font-face {
-    font-family: 'Love';
-    src: url('fonte/grisly_beast/Grisly Beast.ttf') format('truetype');
-}
-
-html, body {
-    height: 100%;
-    overflow-x: hidden;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,106 +5,127 @@ html, body {
     color: white;
 }
 
+@font-face {
+    font-family: 'Love';
+    src: url('fonte/grisly_beast/Grisly Beast.ttf') format('truetype');
+}
+
 body {
-    background: linear-gradient(to right, #F7931E, #F7931E 33.33%, #F7931E 66.67%, #A36833 100%);
-    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to right, #F7931E 0%, #F7931E 33.33%, #F7931E 66.67%, #A36833 100%);
+    height: 100vh;
+    min-height: 720px; /* Define a altura mínima */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    position: relative;
 }
 
 body::before {
-    content: "";
-    position: absolute;
-    inset: 0;
     background-image: url("img/bg35.png");
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: cover;
+    background-position: 120%;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     opacity: 0.3;
-    z-index: 0;
-    pointer-events: none;
 }
 
 .container {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: 1200px;
-    background-color: rgba(163, 104, 51, 0.46);
-    border: 2px solid #A36833;
-    border-radius: 24px;
-    box-shadow: 4px 4px 20px rgba(1, 8, 14, 0.15);
-    padding: 2rem;
+    width: 80%;
+    height: 80%; 
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    border-radius: 24px;
+    border: 2px solid #A36833;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-color: #A3683375;
+    background-size: 100% 100%;
+    position: relative;
+    padding: 2rem; /* Adiciona padding interno */
+    margin: 2rem 0; /* Adiciona margem superior e inferior */
+}
+
+.container__conteudo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
 }
 
 .container__informacoes {
-    flex: 1 1 300px;
-    padding: 1rem;
+    flex: 1;
+    padding: 3rem;
 }
 
-.container__imagem-pessoa {
-    flex: 1 1 300px;
-    max-width: 400px;
+.container__botao {
+    border-radius: 16px;
+    background: #A35333;
+    padding: 16px 24px;
     width: 100%;
-    height: auto;
-}
-
-h1 {
-    font-family: 'Love', sans-serif;
-    font-size: clamp(2.5rem, 5vw, 5rem);
-    padding-bottom: 1.5rem;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
 }
 
 .container__texto {
-    margin: 1rem 0;
+    margin: 16px 0 16px 0;
 }
 
 .container__texto-azul {
     color: #A35333;
 }
 
-.texto__paragrafo {
-    font-size: clamp(1rem, 2.5vw, 2rem);
-    font-weight: 400;
-}
-
 .container__input {
     width: 100%;
-    height: 60px;
+    height: 72px;
     border-radius: 16px;
     background-color: #FFF;
     border: none;
     color: #1875E8;
-    padding: 1rem 2rem;
-    font-size: 20px;
+    padding: 2rem;
+    font-size: 24px;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
-    margin-bottom: 1rem;
 }
 
 .container__botoes {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2em;
 }
 
-.container__botao {
-    border-radius: 16px;
-    background: #A35333;
-    padding: 12px 20px;
-    font-size: 18px;
-    font-weight: 700;
-    border: none;
+h1 {
+    font-family: 'Love', sans-serif;
+    font-size: 80px;
+    padding-bottom: 3rem;
+}
+
+p,
+button {
     font-family: 'Inter', sans-serif;
-    flex: 1 1 150px;
-    min-width: 120px;
+}
+
+.texto__paragrafo {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.chutes_errados {
+    font-size: 22px;
+    font-weight: 200;
+    text-align: center;
+    width: fit-content;
+    margin: 30px auto 0;
+}
+
+.chutes_errados span {
+    font-family: 'Inter', sans-serif;
+    font-size: inherit;
+    font-weight: inherit;
+    margin-top: 20px auto 0;
 }
 
 button.container__botao:disabled {
@@ -124,58 +135,104 @@ button.container__botao:disabled {
     opacity: 0.6;
 }
 
-.chutes_errados {
-    font-size: 20px;
-    font-weight: 200;
-    text-align: center;
-    margin: 2rem auto 0;
-    width: fit-content;
+.container__imagem-pessoa {
+    width: 50%; /* Tamanho padrão */
+    height: auto;
+}
+.dica{
+    background-color: #33A387;
+    border-radius: 10px;
+    
+    .destaque {
+        
+        color: #1875E8;
+        font-weight: bold;}
 }
 
-.chutes_errados span {
-    font-family: 'Inter', sans-serif;
-}
 
-/* Responsividade */
-@media screen and (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container__imagem-pessoa {
-        max-width: 300px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        padding: 1rem;
-    }
-
-    .container {
-        padding: 1rem;
-    }
-
+@media screen and (max-width: 1329px) {
     h1 {
-        font-size: 2rem;
+        font-size: 50px;
     }
 
     .container__botao {
         font-size: 16px;
-        padding: 10px 16px;
+    }
+
+    .texto__paragrafo {
+        font-size: 24px;
+    }
+
+    .container__imagem-pessoa {
+        display: none; /* Esconde a imagem em telas menores que 1390px */
+    }
+
+    .container__conteudo {
+        display: block;
+        position: relative;
+    }
+
+    .container__informacoes {
+        padding: 1rem;
+    }
+
+    body::before {
+        background-size: contain; /* Ajusta a imagem para se conter dentro da área */
+    }
+
+    .container {
+        justify-content: center; /* Centraliza o conteúdo */
+        align-items: center; /* Centraliza o conteúdo */
+        width: 90%; /* Adapta a largura ao monitor */
+        margin: 1rem; /* Adiciona margem ao redor da container */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        margin: 1rem; /* Adiciona margem ao redor da container */
+    }
+
+    .container__informacoes {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .texto__paragrafo {
+        font-size: 20px;
+    }
+
+    .container__botao {
+        font-size: 14px;
+        padding: 12px 18px;
     }
 
     .container__input {
         height: 48px;
-        font-size: 16px;
+        font-size: 18px;
     }
 
-    .container__imagem-pessoa {
-        display: none;
+    body::before {
+        background-size: contain; /* Ajusta a imagem para se conter dentro da área */
     }
+}
 
-    .texto__paragrafo {
-        font-size: 16px;
+@media screen and (min-width: 1330px) {
+    h1{
+        font-size: 50px;
     }
+    .container {
+        width: 90%;
+        height: 80%;
+        /* margin: 2rem; Adiciona margem superior e inferior */
+    }
+   .container__imagem-pessoa{
+    width: 40%;
+   }
 }
