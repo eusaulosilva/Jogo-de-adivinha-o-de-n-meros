@@ -73,9 +73,9 @@ function verificarChute() {
 
     } else {
         if (chute > numberSecret) {
-            exibirTexto('p', `O número secreto é menor que ${chute}`);
+            exibirTexto('p', `O número secreto é <span class="dica">menor</span> que ${chute}`);
         } else {
-            exibirTexto('p', `O número secreto é maior que ${chute}`);
+            exibirTexto('p', `O número secreto é <span class="dica">maior</span> que ${chute}`);
         }
 
         if (!chutesErrados.includes(chute)) {
