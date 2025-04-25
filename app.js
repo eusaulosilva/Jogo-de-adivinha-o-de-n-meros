@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = [];
-const numberMax = 1000;
+const numberMax = 10000;
 let tentativa = 1;
 let numberSecret = gerarNumeroAleatorio();
 let chutesErrados = [];
@@ -30,6 +30,7 @@ inputChute.addEventListener('keydown', e => {
 function mensagemInicial() {
     exibirTexto('h1', 'Adivinhe o número');
     exibirTexto('p', `Escolha um número de 1 a ${numberMax}`);
+    inputChute.focus();
 }
 
 function exibirTexto(tag, texto) {
