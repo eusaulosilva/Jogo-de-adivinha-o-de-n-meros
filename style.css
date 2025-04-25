@@ -152,13 +152,8 @@ button.container__botao:disabled {
 }
 
 .dica {
-    background-color: #33A387;
-    border-radius: 10px;
-
-    .destaque {
-        color: #1875E8;
-        font-weight: bold;
-    }
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* Responsividade */
