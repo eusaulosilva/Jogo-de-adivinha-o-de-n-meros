@@ -64,7 +64,7 @@ function verificarChute() {
     let msgTentativa = tentativa > 1 ? 'tentativas' : 'tentativa';
 
     if (chute == numberSecret) {
-        let mensagem = `Parabéns, você descobriu o número secreto que era ${numberSecret}, após ${tentativa} ${msgTentativa}!!`;
+        let mensagem = ` <span class="dica">Parabéns</span>, você descobriu o número secreto que era ${numberSecret}, após ${tentativa} ${msgTentativa}!!`;
         exibirTexto('h1', 'Acertou :)');
         exibirTexto('p', mensagem);
         btnReiniciar.removeAttribute('disabled');
