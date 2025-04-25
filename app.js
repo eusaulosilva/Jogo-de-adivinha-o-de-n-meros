@@ -137,3 +137,8 @@ function atualizarChutesErrados() {
         });
     }
 }
+window.addEventListener('keydown', function (e) {
+    if (e.key === 'F5' || (e.ctrlKey && e.key === 'r')) {
+        e.preventDefault();
+    }
+});
